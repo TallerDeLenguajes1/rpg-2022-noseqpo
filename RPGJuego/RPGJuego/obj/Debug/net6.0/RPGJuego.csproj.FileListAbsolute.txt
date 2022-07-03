@@ -1,0 +1,15 @@
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\bin\Debug\net6.0\RPGJuego.exe
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\bin\Debug\net6.0\RPGJuego.deps.json
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\bin\Debug\net6.0\RPGJuego.runtimeconfig.json
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\bin\Debug\net6.0\RPGJuego.dll
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\bin\Debug\net6.0\RPGJuego.pdb
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\obj\Debug\net6.0\RPGJuego.csproj.AssemblyReference.cache
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\obj\Debug\net6.0\RPGJuego.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\obj\Debug\net6.0\RPGJuego.AssemblyInfoInputs.cache
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\obj\Debug\net6.0\RPGJuego.AssemblyInfo.cs
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\obj\Debug\net6.0\RPGJuego.csproj.CoreCompileInputs.cache
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\obj\Debug\net6.0\RPGJuego.dll
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\obj\Debug\net6.0\refint\RPGJuego.dll
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\obj\Debug\net6.0\RPGJuego.pdb
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\obj\Debug\net6.0\RPGJuego.genruntimeconfig.cache
+C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\obj\Debug\net6.0\ref\RPGJuego.dll
