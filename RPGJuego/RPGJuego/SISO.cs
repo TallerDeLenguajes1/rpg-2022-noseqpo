@@ -3,40 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace RPGJuego
 {
     public static class SISO
     {
         // Además el programa tendra que tener una opción para que en vez de generar automáticamente los jugadores, se los cargue via el archivo json de jugadores.
-        public static List<Personaje> crearPersonajes(int cantidad)
+        public static void guardarJson(List<Personaje> guardar)
         {
-            List<Personaje> lista = new List<Personaje>();
-            string path = @"C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\";
-
-
-            if (!File.Exists(path + @"/index.json"))
-            {
-                File.Create(path + @"/index.json").Close();
-            }
-            path += @"/index.json";
-
-            for(int i = 0; i < cantidad; i++)
-    {
-                Personaje personaje = new Personaje(i);
-                for (int j = 0; j < i + 1; j++)
-                {
-                    // para que se encuentre personajes cada vez mas potentes
-                    personaje.PowerUp();
-                }
-
-                lista.Add(personaje);
-            }
-
-
-            return lista;
+            // este metodo sobre escribe
+            string path = @"C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\index.json";
+            string toJson = JsonSerializer.Serialize(guardar);
+            File.WriteAllText(path, toJson);
         }
 
+        public static List<Personaje> cargarJson()
+        {
+            string path = @"C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\index.json";
+            List<Personaje> personajes = JsonSerializer.Deserialize<List<Personaje>>(File.ReadAllText(path));
+
+            return personajes;
+        }
 
         public static void addToCSV(string[] ganador)
         {
