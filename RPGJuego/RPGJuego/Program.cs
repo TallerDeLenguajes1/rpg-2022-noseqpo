@@ -1,20 +1,9 @@
 ﻿using RPGJuego;
 {
     // mover todo a Sistema
+    Sistema newGame = new Sistema();
 
-    List<Personaje> lista = new List<Personaje>();
-
-    for (int i = 0; i < 4; i++)
-    {
-        Personaje personaje = new Personaje(i);
-        for (int j = 0; j < i+1; j++)
-        {
-            // para que se encuentre personajes cada vez mas potentes
-            personaje.PowerUp();
-        }
-        
-        lista.Add(personaje);
-    }
+    List<Personaje> lista = newGame.crearPersonajes(5);
 
     Console.WriteLine("Pre\n");
     foreach (Personaje item in lista)
@@ -22,7 +11,7 @@
         Console.WriteLine(item.ToString());
     }
 
-    Sistema newGame = new Sistema();
+    
     newGame.Start(lista);
 
 
@@ -31,4 +20,8 @@
     {
         Console.WriteLine(item.ToString());
     }
+
+    string[] winner = { "cd", "bds" , "c"}; // linea por indice 
+
+    //SISO.addToCSV(winner);
 }

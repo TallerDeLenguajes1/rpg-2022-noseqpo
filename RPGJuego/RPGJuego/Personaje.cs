@@ -9,6 +9,7 @@ namespace RPGJuego
     public class Personaje
     {
         private int id;
+        private string name;
         private int vida;
         private int velocidad;
         private int destreza;
@@ -21,6 +22,7 @@ namespace RPGJuego
             this.nivel = 1;
             this.vida = 100;
             this.id = id;
+            this.name = "David_" + id;
             // poner nombre desde api? 
         }
 
@@ -47,7 +49,7 @@ namespace RPGJuego
 
         public override string ToString()
         {
-            string idS = "Personaje " + this.id + "\n";
+            string nameS = "Personaje "+ this.name + "\n";
             string vidaS = "La vida actual del personaje es: " + this.vida + "\n";
             string nivelS = "El nivel actual del personaje es: " + this.nivel + "\n";
             string velocidadS = "La velocidad actual del personaje es: " + this.velocidad + "\n";
@@ -55,7 +57,7 @@ namespace RPGJuego
             string destrezaS = "La armadura actual del personaje es: " + this.destreza + "\n";
             string fuerzaS = "La fuerza actual del personaje es: " + this.fuerza + "\n";
 
-            return idS + vidaS + nivelS + velocidadS + armaduraS + destrezaS + fuerzaS;
+            return nameS + vidaS + nivelS + velocidadS + armaduraS + destrezaS + fuerzaS;
         }
 
     }

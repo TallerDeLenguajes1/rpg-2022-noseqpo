@@ -9,8 +9,31 @@ namespace RPGJuego
     public class Sistema
     {
         private static int maxDamage = 500; // * 100
+        private List<string> archivos = new List<string>(); // no needed
 
+        public List<Personaje> crearPersonajes(int cantidad)
+        {
+            List<Personaje> lista = new List<Personaje>();
+            string path = @"C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\";
 
+            if (!File.Exists(path + @"/index.json"))
+            {
+                File.Create(path + @"/index.json").Close();
+            }
+            path += @"/index.json";
+
+            for (int i = 0; i < cantidad; i++)
+            {
+                Personaje personaje = new Personaje(i);
+                for (int j = 0; j < i + 1; j++)
+                {
+                    // para que se encuentre personajes cada vez mas potentes
+                    personaje.PowerUp();
+                }
+                lista.Add(personaje);
+            }
+            return lista;
+        }
         public void Start(List<Personaje> lista)
         {
             int cnt = 0;
@@ -59,6 +82,7 @@ namespace RPGJuego
                 Atacar(uno, dos);
                 Atacar(dos, uno);
             }
+            // eliminar perdedor
             uno.PowerUp();
             dos.PowerUp();
         }
@@ -90,7 +114,11 @@ namespace RPGJuego
                 return test.Vida > 0;
             }
             else return false;
-            
+        }
+
+        public void toList(string linea) // no needed
+        {
+
         }
 
         private double PoderDisparo( Personaje atacante)
