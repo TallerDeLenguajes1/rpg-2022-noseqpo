@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.Net;
 
 namespace RPGJuego
 {
@@ -22,8 +24,43 @@ namespace RPGJuego
             this.nivel = 1;
             this.vida = 100;
             this.id = id;
-            this.name = "David_" + id;
+            this.name = crearNombre();
             // poner nombre desde api? 
+        }
+
+        private string crearNombre()
+        {
+            var url = $"https://random-names-api.herokuapp.com/random";
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "GET";
+            request.ContentType = "application/json";
+            request.Accept = "application/json";
+            string nombre = "";
+            try
+            {
+                using (WebResponse response = request.GetResponse())
+                {
+                    using (Stream strReader = response.GetResponseStream())
+                    {
+                        if (strReader == null) return "";
+                        using (StreamReader objReader = new StreamReader(strReader))
+                        {
+                            string responseBody = objReader.ReadToEnd();
+                            ListNames nombres = JsonSerializer.Deserialize<ListNames>(responseBody);
+                            foreach (Name tmp in nombres.nombres)
+                            {
+                                nombre = tmp.name;
+                            }
+                            return nombre;
+                        }
+                    }
+                }
+            }
+            catch (WebException ex)
+            {
+                Console.WriteLine("Problemas de acceso a la API");
+                return "";
+            }
         }
 
         public int Id { get { return this.id; } }

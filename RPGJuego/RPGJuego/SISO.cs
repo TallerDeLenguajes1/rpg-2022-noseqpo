@@ -16,6 +16,7 @@ namespace RPGJuego
             string path = @"C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\index.json";
             string toJson = JsonSerializer.Serialize(guardar);
             File.WriteAllText(path, toJson);
+            Console.WriteLine("***** Personajes Guardados!\n\n");
         }
 
         public static List<Personaje> cargarJson()
@@ -23,6 +24,7 @@ namespace RPGJuego
             string path = @"C:\Users\Acer Aspire 5\Codigos\TallerDeLenguajesI\rpg-2022-noseqpo\RPGJuego\RPGJuego\index.json";
             List<Personaje> personajes = JsonSerializer.Deserialize<List<Personaje>>(File.ReadAllText(path));
 
+            Console.WriteLine("***** Personajes Cargados!\n\n");
             return personajes;
         }
 
@@ -41,6 +43,7 @@ namespace RPGJuego
             {
                 Console.WriteLine("No existe");
             }
+            Console.WriteLine("***** Registro de ganadores guardado!\n\n");
         }
     }
 }
